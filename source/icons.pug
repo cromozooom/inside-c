@@ -1,0 +1,98 @@
+extends views/layout.pug
+block content	
+	include views/svg/svg
+
+	mixin svg(size, id, description)
+		svg.icon(viewBox= size): use(xlink:href=id)
+		br
+		if description
+			small(title= description)= id
+		else
+			small(title= "?")= id
+		
+
+	mixin lisIcon(size, id, description)
+		li.list-inline-item
+			+svg(size, id)
+	h1 UI
+	ul.list-unstyled.list-inline
+		+lisIcon("0 0 110 110", "#bullet")
+		+lisIcon("0 0 110 110", "#plus")
+		+lisIcon("0 0 110 110", "#minus")
+		+lisIcon("0 0 110 110", "#filter")
+		+lisIcon("0 0 110 110", "#cross")
+		+lisIcon("0 0 110 110", "#star")
+		+lisIcon("0 0 110 110", "#star1")
+	h1 Devices
+	ul.list-unstyled.list-inline
+		+lisIcon("0 0 110 110", "#tablet")
+		+lisIcon("0 0 110 110", "#all_devices")
+		+lisIcon("0 0 110 110", "#desk_mobile")
+		+lisIcon("0 0 110 110", "#desktop")
+		+lisIcon("0 0 110 110", "#mobile")
+	h1 Game
+	ul.list-unstyled.list-inline
+		+lisIcon("0 0 110 110", "#three_weels")
+		+lisIcon("0 0 110 110", "#five_weels")
+		+lisIcon("0 0 110 110", "#cardChips")
+		+lisIcon("0 0 110 110", "#cards")
+		+lisIcon("0 0 110 110", "#cards1")
+		+lisIcon("0 0 110 110", "#cards2")
+		+lisIcon("0 0 110 110", "#cardsTable")
+		+lisIcon("0 0 110 110", "#chips")
+		+lisIcon("0 0 110 110", "#dice")
+		+lisIcon("0 0 110 110", "#dice1")
+		+lisIcon("0 0 110 110", "#dice2")
+		+lisIcon("0 0 110 110", "#roulette")
+	h1 BINGO
+	ul.list-unstyled.list-inline
+		+lisIcon("0 0 110 110", "#bingo")
+	h1 Atribute
+	ul.list-unstyled.list-inline
+		+lisIcon("0 0 110 110", "#download")
+		+lisIcon("0 0 110 110", "#cash")
+		+lisIcon("0 0 110 110", "#free")
+		+lisIcon("0 0 110 110", "#gift")
+		+lisIcon("0 0 110 110", "#live")
+		+lisIcon("0 0 110 110", "#lucky")
+		+lisIcon("0 0 110 110", "#new")
+		+lisIcon("0 0 110 110", "#news")
+		+lisIcon("0 0 110 110", "#payPall")
+		+lisIcon("0 0 110 110", "#question")
+		+lisIcon("0 0 110 110", "#vip")
+		+lisIcon("0 0 110 110", "#freeSpins")
+		+lisIcon("0 0 110 110", "#videoSpins")
+		+lisIcon("0 0 110 110", "#videoSpins1")
+	hr
+	h3 Inside casino
+		br
+		small  Data for table game
+	table
+		tr
+			td: small.px-3 Downloadable app
+			td: +svg("0 0 110 110", "#download")
+		tr
+			td: small.px-3 Progressive jackpots
+			td: +svg("0 0 110 110", "#cash")
+		tr
+			td: small.px-3 Has FREE spins
+			td: +svg("0 0 110 110", "#freeSpins")
+		tr
+			td: small.px-3 Has video spins
+			td: +svg("0 0 110 110", "#videoSpins")
+			td: +svg("0 0 110 110", "#videoSpins1")
+		tr
+			td: small.px-3 Progressive jackpots
+			td: +svg("0 0 110 110", "#cash")
+		tr
+			td: small.px-3
+				| Bonus Games - Bonus bets that offer the opportunity to enter bonus games
+				| (eg. Deal or no Deal Roulette)
+			td: +svg("0 0 110 110", "#lucky")
+		tr
+			td: small.px-3 Device available
+			td: +svg("0 0 110 110", "#tablet")
+			td: +svg("0 0 110 110", "#all_devices")
+			td: +svg("0 0 110 110", "#desk_mobile")
+			td: +svg("0 0 110 110", "#desktop")
+			td: +svg("0 0 110 110", "#mobile")

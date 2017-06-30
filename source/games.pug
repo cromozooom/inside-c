@@ -1,0 +1,93 @@
+extends views/layout.pug
+block content	
+	include views/svg/svg
+	mixin svg(size, id, description)
+		svg.icon(viewBox= size): use(xlink:href=id)
+	mixin gamesCard(game, titleGame)
+		section.gameCard(class= game)
+			.game-card__head
+				.container
+					.d-flex.align-items-stretch
+						.game-card__logo
+							img(src= "img/games/" + game + "-assets/logo.png" )
+						.game-card__info.align-self-center
+							h2= titleGame
+							p.mb-0.pb-0
+								| offered by 
+								a(href="") CRYPTOLOGIC
+							section.stars
+								+svg("0 0 110 110", "#star")
+								+svg("0 0 110 110", "#star")
+								+svg("0 0 110 110", "#star")
+								+svg("0 0 110 110", "#star")
+								+svg("0 0 110 110", "#star1")
+								
+						.game-card__cta.ml-auto.align-self-center
+							a.btn.btn-lg(href="") Play Now
+			.gameCard__details.container-fluid
+				.container
+					.d-flex.justify-content-center.m-0.px-0
+						section.gameCard__gameImage.mx-3
+							img(src= "img/games/" + game + "-assets/gameImage.jpg" )
+						section.gameCard__attribute.mx-3
+							.gameCard__icons
+								ul.list-unstyled.d-flex.justify-content-around
+									li.list-inline-item.center-text
+										+svg("0 0 110 110", "#three_weels")
+										br
+										small 3 Whels
+									li.list-inline-item.text-center
+										+svg("0 0 110 110", "#payPall")
+										br
+										small Payment
+									li.list-inline-item.text-center
+										+svg("0 0 110 110", "#all_devices")
+										br
+										small device
+									li.list-inline-item.text-center
+										+svg("0 0 110 110", "#cash")
+										br
+										small Progressive
+									li.list-inline-item.text-center.disable
+										+svg("0 0 110 110", "#free")
+										br
+										small Free Spins
+									li.list-inline-item.text-center
+										+svg("0 0 110 110", "#live")
+										br
+										small Live
+										
+										
+							.gameCard__attribute.d-flex.flex-column
+								h3.text-center Attribute
+								.attributeList.d-flex.justify-content-center
+									dl.d-flex.flex-wrap.align-items-stretch.mx-3
+										dt.py-2 Paylines
+										dd.py-2.mb-0.text-right £10
+										dt.py-2 Jackpot Win
+										dd.py-2.mb-0.text-right £250000
+										dt.py-2 Volatility
+										dd.py-2.mb-0.text-right LOW
+										dt.py-2 RTP
+										dd.py-2.mb-0.text-right 96%
+									
+									dl.d-flex.flex-wrap.align-items-stretch.mx-3
+										dt.py-2 Paylines
+										dd.py-2.mb-0.text-right £10
+										dt.py-2 Jackpot Win
+										dd.py-2.mb-0.text-right £250000
+										dt.py-2 Volatility
+										dd.py-2.mb-0.text-right LOW
+										dt.py-2 RTP
+										dd.py-2.mb-0.text-right 96%
+	
+	+gamesCard("davinci-diamonds", "DaVinci Diamonds")
+	br
+	
+	+gamesCard("golden-godess", "Golden Godess")
+	br
+	+gamesCard("cleopatra", "Cleopatra")
+	br
+	+gamesCard("rainbow-riches", "Rainbow Riches")
+	br
+	+gamesCard("starburst", "Starburst")

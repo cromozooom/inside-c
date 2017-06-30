@@ -1,0 +1,118 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,500,800|Poller+One);
+
+// Variables
+//
+// Copy settings from this file into the provided `_custom.scss` to override
+// the Bootstrap defaults without modifying key, versioned files.
+
+
+// Table of Contents
+//
+// Colors
+// Options
+// Spacing
+// Body
+// Links
+// Grid breakpoints
+// Grid containers
+// Grid columns
+// Fonts
+// Components
+// Tables
+// Buttons
+// Forms
+// Dropdowns
+// Z-index master list
+// Navbar
+// Navs
+// Pagination
+// Jumbotron
+// Form states and alerts
+// Cards
+// Tooltips
+// Popovers
+// Badges
+// Modals
+// Alerts
+// Progress bars
+// List group
+// Image thumbnails
+// Figures
+// Breadcrumbs
+// Carousel
+// Close
+// Code
+
+// Colors
+//
+// Grayscale and brand colors for use across Bootstrap.
+
+// Start with assigning color names to specific hex values.
+$red:		#d9534f;
+$orange:	#ffc229;
+$pink:		#e23050;
+$purple:	#913075;
+$gold:		#d8ba75;
+$branGreen:	#0d9999;
+$brandBg: 	darken($purple, 20%);
+
+// Body
+$body-bg:		white;
+$body-color:	back;
+
+
+// Fonts
+$font-family-sans-serif:	'Montserrat', -apple-system, system-ui, BlinkMacSystemFont, "Comfortaa" , cursive, Roboto, "Helvetica Neue", Arial, sans-serif;
+$font-family-serif:			Georgia, "Times New Roman", Times, serif !default;
+
+$font-family-monospace:		'Poller One', Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", sans-serif;
+$font-family-base:			$font-family-sans-serif !default;
+
+$headings-font-family:		$font-family-monospace;
+$headings-color:			$gold;
+
+
+
+
+// Links
+
+$link-color:            $orange;
+$link-hover-color:      darken($link-color, 15%);
+
+
+
+// Navbar
+
+$navbar-border-radius:              $border-radius ;
+$navbar-padding-x:                  $spacer ;
+$navbar-padding-y:                  ($spacer / 2) ;
+
+$navbar-brand-padding-y:            .25rem ;
+
+$navbar-toggler-padding-x:           .75rem ;
+$navbar-toggler-padding-y:           .25rem ;
+$navbar-toggler-font-size:           $font-size-lg ;
+$navbar-toggler-border-radius:       $btn-border-radius ;
+
+$navbar-inverse-color:                 rgba(white,.5) ;
+$navbar-inverse-hover-color:           rgba(white,.75) ;
+$navbar-inverse-active-color:          rgba(white,1) ;
+$navbar-inverse-disabled-color:        rgba(white,.25) ;
+$navbar-inverse-toggler-bg: str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='#{$navbar-inverse-color}' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E"), "#", "%23") ;
+$navbar-inverse-toggler-border:        rgba(white,.1) ;
+
+// Options
+$enable-rounded:					false;
+
+// Body
+$body-color: lighten(black, 10%);
+
+// Buttons
+
+$btn-primary-color:              $brandBg;
+$btn-primary-bg:                 $orange;
+$btn-primary-border:             $orange;
+
+// Modals
+
+$modal-content-bg:               $body-bg;
