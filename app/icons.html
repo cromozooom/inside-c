@@ -690,9 +690,31 @@
         </td>
       </tr>
     </table>
-    <!--script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js')-->
-    <!--script(src='https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js', integrity='sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb', crossorigin='anonymous')-->
-    <!--script(src='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js', integrity='sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn', crossorigin='anonymous')-->
-    <!--script(src='https://cdn.rawgit.com/scottjehl/picturefill/3.0.2/dist/picturefill.min.js')-->
+    <script src="https:////cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://zurb.com/playground/uploads/upload/upload/330/stackblur.min.js"></script>
+    <script>
+      $(function() {
+      	// Change this value to adjust the amount of blur
+      	var BLUR_RADIUS = 3;
+      
+      	var canvas = document.querySelector('[data-canvas]');
+      	var canvasContext = canvas.getContext('2d');
+      
+      	var image = new Image();
+      	image.src = document.querySelector('[data-canvas-image]').src;
+      
+      	var drawBlur = function() {
+      		var w = canvas.width;
+      		var h = canvas.height;
+      		canvasContext.drawImage(image, 0, 0, w, h);
+      		stackBlurCanvasRGBA('heroCanvas', 0, 0, w, h, BLUR_RADIUS);
+      	};
+      
+      	image.onload = function() {
+      		drawBlur();
+      	}
+      });
+      
+    </script>
   </body>
 </html>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 21.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 700 250" style="enable-background:new 0 0 720 250;" xml:space="preserve" background-color="red">
+	<style>
+		.img {
+			background: red;
+			fill: red;
+		}
+	</style>
+	<defs>
+		<filter id="blure" x="0" y="0">
+			<feGaussianBlur in="SourceGraphic" stdDeviation="3" />
+		</filter>
+	</defs>
+	<g class="img">
+		<!-- rect x="0" y="0" width="720" height="250"/-->
+		<!-- filter="url(#blure)" -->
+		<image style="overflow:fidden;" width="720" height="250" xlink:href="bg.jpg"  transform="matrix(1 0 0 1 -10 10)"></image>
+		<!--text x="0" y="0" font-family="Verdana" font-size="55" fill="blue" >Hello</text-->
+	</g>
+</svg>
