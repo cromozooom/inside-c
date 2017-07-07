@@ -693,27 +693,36 @@
     <script src="https:////cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script src="https://zurb.com/playground/uploads/upload/upload/330/stackblur.min.js"></script>
     <script>
-      $(function() {
-      	// Change this value to adjust the amount of blur
-      	var BLUR_RADIUS = 3;
+      $(function(){
+      	// our iteration
+      	$('[data-canvas]').each(function(){
+      		var $el = $(this);
       
-      	var canvas = document.querySelector('[data-canvas]');
-      	var canvasContext = canvas.getContext('2d');
+      		var BLUR_RADIUS = 5;
+      		var canvas = this; // canvas is the element we're iterating over
+      		var canvasContext = canvas.getContext('2d');
       
-      	var image = new Image();
-      	image.src = document.querySelector('[data-canvas-image]').src;
+      		var image = new Image();
       
-      	var drawBlur = function() {
-      		var w = canvas.width;
-      		var h = canvas.height;
-      		canvasContext.drawImage(image, 0, 0, w, h);
-      		stackBlurCanvasRGBA('heroCanvas', 0, 0, w, h, BLUR_RADIUS);
-      	};
+      		// I changed the line below of theirs to refer to the canvases attributes
+      		// we're iterating over above
+      		image.src = $el.attr('data-src');
       
-      	image.onload = function() {
-      		drawBlur();
-      	}
+      		var drawBlur = function() {
+      			var w = canvas.width;
+      			var h = canvas.height;
+      			canvasContext.drawImage(image, 0, 0, w, h);
+      
+      			var id = $el.attr('id'); // use the id from the canvas
+      			stackBlurCanvasRGBA( id, 0, 0, w, h, BLUR_RADIUS);
+      		};
+      
+      		image.onload = function() {
+      			drawBlur();
+      		}
+      	});
       });
+      
       
     </script>
   </body>

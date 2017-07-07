@@ -1,0 +1,1 @@
+[7/6/2017, 4:55:13 PM] layer "50% bg.jpg6, bg_.jpg": Duplicate path: bg_.jpg

@@ -20,7 +20,42 @@ html
 		
 		//- blure
 		script(src='https://zurb.com/playground/uploads/upload/upload/330/stackblur.min.js')
+		
 		script
+			.
+				$(function(){
+					// our iteration
+					$('[data-canvas]').each(function(){
+						var $el = $(this);
+
+						var BLUR_RADIUS = 5;
+						var canvas = this; // canvas is the element we're iterating over
+						var canvasContext = canvas.getContext('2d');
+
+						var image = new Image();
+
+						// I changed the line below of theirs to refer to the canvases attributes
+						// we're iterating over above
+						image.src = $el.attr('data-src');
+
+						var drawBlur = function() {
+							var w = canvas.width;
+							var h = canvas.height;
+							canvasContext.drawImage(image, 0, 0, w, h);
+
+							var id = $el.attr('id'); // use the id from the canvas
+							stackBlurCanvasRGBA( id, 0, 0, w, h, BLUR_RADIUS);
+						};
+
+						image.onload = function() {
+							drawBlur();
+						}
+					});
+				});
+
+		
+		//- one image blure
+		//- script
 			.
 				$(function() {
 					// Change this value to adjust the amount of blur
