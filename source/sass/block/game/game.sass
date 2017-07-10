@@ -8,7 +8,7 @@
 		$s-hsl: ($b-hsb * $s-hsb) / if($l-hsl < 50, $l-hsl * 2, 200 - $l-hsl * 2)
 		@return hsla($h-hsb, $s-hsl, $l-hsl, $a)
 
-$game-list: rainbow-riches 196 100 89, starburst 269 80 39, cleopatra 34 100 96, golden-godess 273 88 51, davinci-diamonds 221 98 58, family-guy-slots 235 75 58, mafia-millions-slots 18 47 38, ruby-slippers-slot 120 75 30, blackjack 154 87 55, star-spin-slot 51 97 91, wizard-of-oz-slot 120 80 40, mega-moolah-slot 54 90 99, bruce-lee-slots 58 86 69, avalon-slots 55 57 70, raging-rhino-slot 48 100 100, book-of-dead-slot 40 71 95, marvel-slots 206 70 66, pot-of-gold-slots 39 100 100, fishing-frenzy-slot 42 83 95, willy-wonka-slots 345 92 100, pharaohs-fortune-slot 44 66 86, thunderstruck-2-slot 178 100 56, star-trek-slots 209 98 97, dead-or-alive-slot 54 100 93, lucky-lady-charm-slot 48 100 81, hulk-slot 120 72 19, zuma-slots 0 100 83
+$game-list: rainbow-riches 196 100 89, starburst 269 80 39, cleopatra 34 100 96, golden-godess 273 88 51, davinci-diamonds 221 98 58, family-guy-slots 235 75 58, mafia-millions-slots 18 47 38, ruby-slippers-slot 120 75 30, blackjack 154 87 55, star-spin-slot 51 97 91, wizard-of-oz-slot 120 80 40, mega-moolah-slot 54 90 99, bruce-lee-slots 58 86 69, avalon-slots 55 57 70, raging-rhino-slot 48 100 100, book-of-dead-slot 40 71 95, marvel-slots 206 70 66, pot-of-gold-slots 39 100 100, fishing-frenzy-slot 42 83 95, willy-wonka-slots 345 92 100, pharaohs-fortune-slot 44 66 86, thunderstruck-2-slot 178 100 56, star-trek-slots 209 98 97, dead-or-alive-slot 54 100 93, lucky-lady-charm-slot 48 100 81, hulk-slot 120 72 19, zuma-slots 0 100 83, tiki-island-slots 192 91 75
 
 @each $game in $game-list
 	$btnBg:         hsb(nth($game, 2), nth($game, 3), nth($game, 3), 1) // button color
