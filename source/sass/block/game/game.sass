@@ -1,3 +1,6 @@
+
+
+
 // HSB to HSLA COLOR with SASS
 // https://www.sitepoint.com/hsb-colors-with-sass
 @function hsb($h-hsb, $s-hsb, $b-hsb, $a: 1)
@@ -8,10 +11,16 @@
 		$s-hsl: ($b-hsb * $s-hsb) / if($l-hsl < 50, $l-hsl * 2, 200 - $l-hsl * 2)
 		@return hsla($h-hsb, $s-hsl, $l-hsl, $a)
 
-$game-list: rainbow-riches 196 100 89, starburst 269 80 39, cleopatra 34 100 96, golden-godess 273 88 51, reel-king 208 100 84, davinci-diamonds 221 98 58, family-guy-slots 235 75 58, mafia-millions-slots 18 47 38, ruby-slippers-slot 120 75 30, blackjack 154 87 55, star-spin-slot 51 97 91, wizard-of-oz-slot 120 80 40, mega-moolah-slot 54 90 99, bruce-lee-slots 58 86 69, avalon-slots 55 57 70, raging-rhino-slot 48 100 100, book-of-dead-slot 40 71 95, marvel-slots 206 70 66, pot-of-gold-slots 39 100 100, fishing-frenzy-slot 42 83 95, willy-wonka-slots 345 92 100, pharaohs-fortune-slot 44 66 86, thunderstruck-2-slot 178 100 56, star-trek-slots 209 98 97, dead-or-alive-slot 54 100 93, lucky-lady-charm-slot 48 100 81, hulk-slot 120 72 19, zuma-slots 0 100 83, tiki-island-slots 192 91 75, britain-s-got-talent-slots 358 80 52, double-bubble-slot 150 80 68
+$game-list: rainbow-riches 196 100 89, starburst 269 80 39, cleopatra 34 100 96, golden-godess 273 88 51, reel-king 208 100 84, davinci-diamonds 221 98 58, family-guy-slots 235 75 58, mafia-millions-slots 18 47 38, ruby-slippers-slot 120 75 30, blackjack 154 87 55, star-spin-slot 51 97 91, wizard-of-oz-slot 120 80 40, mega-moolah-slot 54 90 99, bruce-lee-slots 58 86 69, avalon-slots 55 57 70, raging-rhino-slot 48 100 100, book-of-dead-slot 40 71 95, marvel-slots 206 70 66, pot-of-gold-slots 39 100 100, fishing-frenzy-slot 42 83 95, willy-wonka-slots 345 92 100, pharaohs-fortune-slot 44 66 86, thunderstruck-2-slot 178 100 56, star-trek-slots 209 98 97, dead-or-alive-slot 54 100 93, lucky-lady-charm-slot 48 100 81, hulk-slot 120 72 19, zuma-slots 0 100 83, tiki-island-slots 192 91 75, britain-s-got-talent-slots 358 80 52, double-bubble-slot 150 80 68, zeus-slot 183 89 82, action-bank-slot 0 100 80, eye-of-horus-slot 45 96 99, sizzling-slot 44 91 99, fluffy-favourites-slot 45 87 97, fluffy-favourites-slot-2 0 17 100
+
+@function get-contrast($colour)
+	@if (lightness($colour) < 50)
+		@return (lighten($colour, 80%))
+	@else
+		@return (darken($colour, 80%))
 
 @each $game in $game-list
-	$btnBg:         hsb(nth($game, 2), nth($game, 3), nth($game, 3), 1) // button color
+	$btnBg:         hsb(nth($game, 2), nth($game, 3), nth($game, 4), 1) // button color
 	$borderTop:     hsb(nth($game, 2), 80, 60, 1) // border top color
 	$defaultBg:     hsb(nth($game, 2), nth($game, 3), 30, 1) // unde image bg
 	$listBorder:    hsb(nth($game, 2), 80, 80, .5)
@@ -29,7 +38,7 @@ $game-list: rainbow-riches 196 100 89, starburst 269 80 39, cleopatra 34 100 96,
 			a
 				background: $btnBg
 				font-family: $font-family-monospace
-				color: white
+				color: get-contrast($btnBg)
 		svg
 			fill: $icons
 		.gameCard__icons
@@ -45,7 +54,8 @@ $game-list: rainbow-riches 196 100 89, starburst 269 80 39, cleopatra 34 100 96,
 				border-bottom: 1px solid $listBorder
 			dt
 				color: $tintText
-
+			dd
+				color: get-contrast($btnBg)
 .gameCard
 	.game-card__head
 		background: white
@@ -59,8 +69,6 @@ $game-list: rainbow-riches 196 100 89, starburst 269 80 39, cleopatra 34 100 96,
 	dd, dt
 		width: 50%
 
-	dd
-		color: white
 .game-card__info
 	padding-left: 2rem
 
