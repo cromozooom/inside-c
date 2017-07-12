@@ -11,22 +11,58 @@
 		$s-hsl: ($b-hsb * $s-hsb) / if($l-hsl < 50, $l-hsl * 2, 200 - $l-hsl * 2)
 		@return hsla($h-hsb, $s-hsl, $l-hsl, $a)
 
-$game-list: rainbow-riches 196 100 89, starburst 269 80 39, cleopatra 34 100 96, golden-godess 273 88 51, reel-king 208 100 84, davinci-diamonds 221 98 58, family-guy-slots 235 75 58, mafia-millions-slots 18 47 38, ruby-slippers-slot 120 75 30, blackjack 154 87 55, star-spin-slot 51 97 91, wizard-of-oz-slot 120 80 40, mega-moolah-slot 54 90 99, bruce-lee-slots 58 86 69, avalon-slots 55 57 70, raging-rhino-slot 48 100 100, book-of-dead-slot 40 71 95, marvel-slots 206 70 66, pot-of-gold-slots 39 100 100, fishing-frenzy-slot 42 83 95, willy-wonka-slots 345 92 100, pharaohs-fortune-slot 44 66 86, thunderstruck-2-slot 178 100 56, star-trek-slots 209 98 97, dead-or-alive-slot 54 100 93, lucky-lady-charm-slot 48 100 81, hulk-slot 120 72 19, zuma-slots 0 100 83, tiki-island-slots 192 91 75, britain-s-got-talent-slots 358 80 52, double-bubble-slot 150 80 68, zeus-slot 183 89 82, action-bank-slot 0 100 80, eye-of-horus-slot 45 96 99, sizzling-slot 44 91 99, fluffy-favourites-slot 45 87 97, fluffy-favourites-slot-2 0 17 100
+//$game-list: rainbow-riches 196 100 89, starburst 269 80 39, cleopatra 34 100 96, golden-godess 273 88 51, reel-king 208 100 84, davinci-diamonds 221 98 58, family-guy-slots 235 75 58, mafia-millions-slots 18 47 38, ruby-slippers-slot 120 75 30, blackjack 154 87 55, star-spin-slot 51 97 91, wizard-of-oz-slot 120 80 40, mega-moolah-slot 54 90 99, bruce-lee-slots 58 86 69, avalon-slots 55 57 70, raging-rhino-slot 48 100 100, book-of-dead-slot 40 71 95, marvel-slots 206 70 66, pot-of-gold-slots 39 100 100, fishing-frenzy-slot 42 83 95, willy-wonka-slots 345 92 100, pharaohs-fortune-slot 44 66 86, thunderstruck-2-slot 178 100 56, star-trek-slots 209 98 97, dead-or-alive-slot 54 100 93, lucky-lady-charm-slot 48 100 81, hulk-slot 120 72 19, zuma-slots 0 100 83, tiki-island-slots 192 91 75, britain-s-got-talent-slots 358 80 52, double-bubble-slot 150 80 68, zeus-slot 183 89 82, action-bank-slot 0 100 80, eye-of-horus-slot 45 96 99, sizzling-slot 44 91 99, fluffy-favourites-slot 45 87 97, fluffy-favourites-slot-2 0 17 100
 
-@function get-contrast($colour)
-	@if (lightness($colour) < 50)
-		@return (lighten($colour, 80%))
+$game-list: action-bank-slot #ff0103 #000000,avalon-slots #eab523 #292354,book-of-dead-slot #ffd888 #523105,britain-s-got-talent-slots #cd152d #261163,bruce-lee-slots #ffcc00 #0b200d,cleopatra #ffcc00 #370200,davinci-diamonds #0566dc #000000,dead-or-alive-slot #f0db0c #3a372d,double-bubble-slot #5de49b #f1b6c8,eye-of-horus-slot #fbbd03 #893407,family-guy-slots #00a0d4 #192579,fishing-frenzy-slot #00a0d4 #192579,fluffy-favourites-slot #e872b7 #ffd3d3,fluffy-favourites-slot-2 #e872b7 #ffd3d3,golden-godess #00a0d4 #192579,hulk-slot #00a0d4 #192579,lucky-lady-charm-slot #00a0d4 #192579,mafia-millions-slots #00a0d4 #192579,marvel-slots #00a0d4 #192579,mega-moolah-slot #00a0d4 #192579,pharaohs-fortune-slot #00a0d4 #192579,pot-of-gold-slots #00a0d4 #192579,raging-rhino-slot #00a0d4 #192579,rainbow-riches #00a0d4 #192579,reel-king #00a0d4 #192579,ruby-slippers-slot #00a0d4 #192579,sizzling-slot #00a0d4 #192579,star-spin-slot #00a0d4 #192579,star-trek-slots #00a0d4 #192579,starburst #00a0d4 #192579,thunderstruck-2-slot #00a0d4 #192579,tiki-island-slots #00a0d4 #192579,willy-wonka-slots #00a0d4 #192579,wizard-of-oz-slot #00a0d4 #192579,zeus-slot #00a0d4 #192579,zuma-slots #00a0d4 #192579
+
+//	@function get-contrast($colour)
+//		@if (lightness($colour) < 50)
+//			@return (lighten($colour, 80%))
+//		@else
+//			@return (darken($colour, 80%))
+
+//	@each $game in $game-list
+// $btnBg:         hsb(nth($game, 2), nth($game, 3), nth($game, 4), 1) // button color
+// $borderTop:     hsb(nth($game, 2), 80, 60, 1) // border top color
+// $defaultBg:     hsb(nth($game, 2), nth($game, 3), 30, 1) // unde image bg
+// $listBorder:    hsb(nth($game, 2), 80, 80, .5)
+// $tintText:      hsb(nth($game, 2), 50, 100, 1)
+// $icons:         hsb(nth($game, 2), 80, 100, 1)
+// $iconsDisable:  hsb(nth($game, 2), 10, 40, .5)
+
+@function add-darknes($colour, $adColor)
+	@if (lightness($colour) > 50)
+		@return (darken($colour, $adColor))
 	@else
-		@return (darken($colour, 80%))
+		@return ($colour)
+
+@function get-contrast($colour, $adColor)
+	@if (lightness($colour) < 50)
+		@return (lighten($colour, $adColor))
+	@else
+		@return (darken($colour, $adColor))
+
+@function get-contrast-colors($bg, $font, $adColor)
+	@if (lightness($bg) > 50)
+		@return (darken($font, $adColor * 0.5))
+		//@return blue
+	@if (lightness($bg) < 50)
+		@return (lighten($font, $adColor * 1.5))
+	@else
+		@return (lighten($bg, 0%))
+
 
 @each $game in $game-list
-	$btnBg:         hsb(nth($game, 2), nth($game, 3), nth($game, 4), 1) // button color
-	$borderTop:     hsb(nth($game, 2), 80, 60, 1) // border top color
-	$defaultBg:     hsb(nth($game, 2), nth($game, 3), 30, 1) // unde image bg
-	$listBorder:    hsb(nth($game, 2), 80, 80, .5)
-	$tintText:      hsb(nth($game, 2), 50, 100, 1)
-	$icons:         hsb(nth($game, 2), 80, 100, 1)
-	$iconsDisable:  hsb(nth($game, 2), 10, 40, .5)
+	$primary: add-darknes(nth($game, 2), 20%)
+	$secondary: nth($game, 3)
+
+	$btnBg:         get-contrast(get-contrast($primary, 40%), 50%) // button color
+	$borderTop:     get-contrast($primary, 20%) // border top color
+	$defaultBg:     nth($game, 3) // img bg
+	$listBorder:    rgba(get-contrast-colors($primary, $secondary, 40%), .4)
+	$tintText:      get-contrast-colors($secondary, $primary, 20%)
+	$icons:         get-contrast-colors($secondary, $primary, 50%)
+	$iconsDisable:  rgba(get-contrast-colors($secondary, $primary, 50%), .2)
 
 	.gameCard.#{nth($game, 1)}
 		.game-card__head
@@ -38,9 +74,9 @@ $game-list: rainbow-riches 196 100 89, starburst 269 80 39, cleopatra 34 100 96,
 			a
 				background: $btnBg
 				font-family: $font-family-monospace
-				color: get-contrast($btnBg)
+				color: get-contrast($primary, 30%)
 		svg
-			fill: $icons
+			fill: $tintText
 		.gameCard__icons
 			small
 				color: $tintText
@@ -55,7 +91,10 @@ $game-list: rainbow-riches 196 100 89, starburst 269 80 39, cleopatra 34 100 96,
 			dt
 				color: $tintText
 			dd
-				color: get-contrast($btnBg)
+				color: get-contrast-colors($secondary, $primary, 50%)
+		.gameCard__details
+			background: $secondary
+			background: linear-gradient(10deg, desaturate(get-contrast($primary, 10%), 10%) 0%, rgba($secondary,1) 40%)
 .gameCard
 	.game-card__head
 		background: white
