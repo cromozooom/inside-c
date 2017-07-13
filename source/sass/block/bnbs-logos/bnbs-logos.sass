@@ -1,0 +1,15 @@
+$circleSize: 100px
+ul.list-unstyled.listLogo
+	li
+		width: $circleSize
+		border-radius: $circleSize / 2
+		overflow: hidden
+	img
+		background: transparent
+$logo-list: rewind-bingo 191 100 50, rockin-bingo 177 100 46, cassava-bingo-sites 115 38 67, slingo-com 267 27 38, city-bingo 26 100 50, chit-chat-bingo 43 100 50, bingo-cams 233 30 29, nugget-bingo 196 94 57, swanky-bingo 36 87 19, gravy-train-bingo 271 100 32, costa-bingo 191 100 50, velvet-slots 356 65 25, butlers-bingo 277 78 29, bingo-liner 211 94 30, coral-bingo 211 100 18, wink-bingo 199  97  65, aunty-acid-bingo 327 100 36, cheeky-bingo 244 31 41, lucky-charm-bingo 207 66 67, smooch-bingo 186 64 51, season-bingo 203 100 69, bingo-appy 193 88 51, bubble-bonus-bingo 195 100 79, diva-bingo 324 100 36, mecca-bingo 289 39 40, vampire-bingo 244 41 44, the-bingo-boutique 0 0 100, swag-bingo 0 0 0, king-jackpot 270 93 23, posh-bingo 0 0 0, bet365-bingo 162 91 27, caesarsbingo 0 0 0, two-fat-ladies 195 71 81, bingo-palace 246 77 13, hunky-bingo 0 0 100, paddy-power-bingo 170 100 20, lucky-pants-bingo 262 63 32, betfair-casino 42 100 52, satin-bingo 359 96 24, virgin-bingo 350 100 40, jackpot-joy 231 84 27, frozen-bingo 181 100 49, snowy-bingo 198 97 72, dabber-bingo 0 0 100, bingo-minions 197 72 44, welcome-bingo 208 72 26, newbies-bingo 328 85 27, the-bingo-party 0 0 0, film-bingo 0 0 100, kingdom-of-bingo 49 93 77
+
+@each $logo in $logo-list
+	$bgColor: hsl(nth($logo, 2), nth($logo, 3), nth($logo, 4))
+	$bgColor: hsl(nth($logo, 2), 70, nth($logo, 4))
+	ul.list-unstyled img.#{nth($logo, 1)}
+		background: $bgColor

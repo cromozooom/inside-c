@@ -1,0 +1,8 @@
+extends views/layout.pug
+block content
+	- var logos = ["rewind-bingo", "rockin-bingo", "cassava-bingo-sites", "slingo-com", "city-bingo", "chit-chat-bingo", "bingo-cams", "nugget-bingo", "swanky-bingo", "gravy-train-bingo", "costa-bingo", "velvet-slots", "butlers-bingo", "bingo-liner", "coral-bingo", "wink-bingo", "aunty-acid-bingo", "cheeky-bingo", "lucky-charm-bingo", "smooch-bingo", "season-bingo", "bingo-appy", "bubble-bonus-bingo", "diva-bingo", "mecca-bingo", "vampire-bingo", "the-bingo-boutique", "swag-bingo", "king-jackpot", "posh-bingo", "bet365-bingo", "two-fat-ladies", "bingo-palace", "hunky-bingo", "paddy-power-bingo", "lucky-pants-bingo", "betfair-casino", "satin-bingo", "virgin-bingo", "jackpot-joy", "frozen-bingo", "snowy-bingo", "dabber-bingo", "bingo-minions", "welcome-bingo", "newbies-bingo", "the-bingo-party", "film-bingo", "kingdom-of-bingo"]
+ 
+	ul.list-unstyled.listLogo.d-flex.flex-row.flex-wrap
+		each imgLogo in logos
+			li.m-3
+				img.img-fluid(src= "img/bnbs/logo/" + imgLogo + ".png" class= imgLogo)
