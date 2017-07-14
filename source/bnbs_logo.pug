@@ -1,9 +1,25 @@
 extends views/layout.pug
 block content
-	- var logos = ["rewind-bingo", "rockin-bingo", "cassava-bingo-sites", "slingo-com", "city-bingo", "chit-chat-bingo", "bingo-cams", "nugget-bingo", "swanky-bingo", "gravy-train-bingo", "costa-bingo", "velvet-slots", "butlers-bingo", "bingo-liner", "coral-bingo", "wink-bingo", "aunty-acid-bingo", "cheeky-bingo", "lucky-charm-bingo", "smooch-bingo", "season-bingo", "bingo-appy", "bubble-bonus-bingo", "diva-bingo", "mecca-bingo", "vampire-bingo", "the-bingo-boutique", "swag-bingo", "king-jackpot", "posh-bingo", "bet365-bingo", "caesarsbing", "two-fat-ladies", "bingo-palace", "hunky-bingo", "paddy-power-bingo", "lucky-pants-bingo", "betfair-casino", "satin-bingo", "virgin-bingo", "jackpot-joy", "frozen-bingo", "snowy-bingo", "dabber-bingo", "bingo-minions", "welcome-bingo", "newbies-bingo", "the-bingo-party", "film-bingo", "kingdom-of-bingo", "the-palaces", "amazing-bingo", "have-a-ball-bingo", "abc-bingo", "good-day-bingo", "tombola-bing", "zingo-bingo", "pink-ribbon-bingo", "big-brother-bingo", "lucky-touch", "glitter-bingo", "lucy-bingo", "plush-bingo", "lippy-bingo", "unibet-bingo", "tasty-bingo", "bingo-vip-club", "deal-or-no-deal-bingo", "scope-bingo", "jingle-bingo", "hunnie-bingo", "bingo-888ladie", "lovehearts-bingo", "volcano-bingo", "dream-bingo", "bingo-giving", "bingo-zino", "my-stars-bingo", "zinger-bingo", "bingo-millionaire", "vegas-mobile-casino", "ghost-bingo", "slots-of-dosh", "oink-bingo", "nova-bingo", "maria", "bucky-bingo", "touch-my-bingo", "lucky-diner-bingo", "sugar-bingo", "safari-bingo", "sin-street-bingo", "bingo-clubhouse", "bingo-hollywood", "bingo-52", "mfortune", "bingo-cafe", "clucky-bingo", "bingo-extra", "postcode-bingo", "ted-bingo"]
- 
-	ul.list-unstyled.listLogo.d-flex.flex-row.flex-wrap
-		each imgLogo in logos
-			li.m-3
-				img.img-fluid(src= "img/bnbs/logo/" + imgLogo + ".png" class= imgLogo)
-				p.text-center= imgLogo
+	- var logos = ["rewind-bingo", "rockin-bingo", "cassava-bingo-sites", "slingo-com", "city-bingo", "chit-chat-bingo", "bingo-cams", "nugget-bingo", "swanky-bingo", "gravy-train-bingo", "costa-bingo", "velvet-slots", "butlers-bingo", "bingo-liner", "coral-bingo", "wink-bingo", "aunty-acid-bingo", "cheeky-bingo", "lucky-charm-bingo", "smooch-bingo", "season-bingo", "bingo-appy", "bubble-bonus-bingo", "diva-bingo", "mecca-bingo", "vampire-bingo", "the-bingo-boutique", "swag-bingo", "king-jackpot", "posh-bingo", "bet365-bingo", "caesarsbing", "two-fat-ladies", "bingo-palace", "hunky-bingo", "paddy-power-bingo", "lucky-pants-bingo", "betfair-casino", "satin-bingo", "virgin-bingo", "jackpot-joy", "frozen-bingo", "snowy-bingo", "dabber-bingo", "bingo-minions", "welcome-bingo", "newbies-bingo", "the-bingo-party", "film-bingo", "kingdom-of-bingo", "the-palaces", "amazing-bingo", "have-a-ball-bingo", "abc-bingo", "good-day-bingo", "tombola-bing", "zingo-bingo", "pink-ribbon-bingo", "big-brother-bingo", "lucky-touch", "glitter-bingo", "lucy-bingo", "plush-bingo", "lippy-bingo", "unibet-bingo", "tasty-bingo", "bingo-vip-club", "deal-or-no-deal-bingo", "scope-bingo", "jingle-bingo", "hunnie-bingo", "bingo-888ladie", "lovehearts-bingo", "volcano-bingo", "dream-bingo", "bingo-giving", "bingo-zino", "my-stars-bingo", "zinger-bingo", "bingo-millionaire", "vegas-mobile-casino", "ghost-bingo", "slots-of-dosh", "oink-bingo", "nova-bingo", "maria", "bucky-bingo", "touch-my-bingo", "lucky-diner-bingo", "sugar-bingo", "safari-bingo", "sin-street-bingo", "bingo-clubhouse", "bingo-hollywood", "bingo-52", "mfortune", "bingo-cafe", "clucky-bingo", "bingo-extra", "postcode-bingo", "ted-bingo", "we-want-bingo", "big-tease-bingo", "touch-lucky", "fever-bingo", "brown-cow-bingo", "betfred-bingo", "charity-bingo-sites", "tip-top-bingo", "bid-bingo", "bingo-001-bingo", "biscuit-bingo", "beacon-bingo", "slot-ranch", "coffee-bingo", "sky-bingo", "bingo-com", "spy-bingo", "lollipop-bingo", "bingo-hombre", "bgo", "elf-bingo", "robin-hood-bingo", "deep-sea-bingo", "kitty-bingo-2", "polo-bingo", "bingostars", "spin-jackpots", "girly-bingo", "sweet-shop-bingo", "big-bucks-bingo", "big-love-bingo", "red-bus-bingo", "lucky-cow-bingo", "honeybees-bingo", "wallis-bingo", "sweet-home-bingo", "iconic-bingo", "magical-vegas", "vernons-bingo"]
+	.d-flex
+		section
+			h3 style 00
+			ul.list-unstyled.listLogo.d-flex.flex-row.flex-wrap
+				each imgLogo in logos
+					li.m-3.v00
+						img.img-fluid(src= "img/bnbs/logo/" + imgLogo + ".png" class= imgLogo)
+						p.text-center= imgLogo
+		section
+			h3 style 01
+			ul.list-unstyled.listLogo.d-flex.flex-row.flex-wrap
+				each imgLogo in logos
+					li.m-3.v01
+						img.img-fluid(src= "img/bnbs/logo/" + imgLogo + ".png" class= imgLogo)
+						p.text-center= imgLogo
+		section
+			h3 style 02
+			ul.list-unstyled.listLogo.d-flex.flex-row.flex-wrap
+				each imgLogo in logos
+					li.m-3.v02
+						img.img-fluid(src= "img/bnbs/logo/" + imgLogo + ".png" class= imgLogo)
+						p.text-center= imgLogo
