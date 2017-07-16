@@ -1,0 +1,20 @@
+extends views/layout.pug
+block content
+	- var covers = ["50-dragons-slots", "88-fortune-slots", "aloha-sw-slots", "amazon-queen-slots", "avalon-slots", "bar-bar-black-sheep-slots", "big-foot-slots", "blackjack-perfect-pairs-slots", "call-of-the-wild-slots", "cats-slots", "champion-raceway-slots", "coyote-moon-slots", "crystals-of-power-sw-slots", "danger-high-voltage-slots", "dazzle-me-sw-slots", "divine-fortune-slots", "doctor-love-slots", "dolphin-gold-slots", "doubleplay-superbet-slots", "dragon-born", "dragon-emperor", "dragon-story-slots", "drive-slots", "flowers-sw-slots", "fortunes-of-sparta-slots", "foxin-wins-slots", "fruit-shop-christmas-slots", "fruit-shop-slots", "glow-slots", "gold-slots", "gorilla-go-wild-slots", "grand-monarch-slots", "great-wild-elk-slots", "guns-n-roses-slots", "hansel-and-gretel-slots", "hot-cross-bunnies-slots", "isle-o-plenty-slots", "jack-and-the-beanstalk-slots", "jack-hammer-2-sw-slots", "jack-hammer-sw-slots", "jackpot-jester-wild-nudge-slots", "king-kong-cash-slots", "king-of-slots-slots", "kingdom-of-wealth-slots", "kitty-glitter-slots", "koi-princess-slots", "lights-slots", "lucky-tree-slots", "master-of-mystery-sw-slots", "medieval-money-slots", "megajackpots-siberian-storm-slots", "megajackpots-wolf-run-slots", "mermaids-millions-sw-slots", "montezuma-slots", "motorhead-sw-slots", "pharaohs-fortune-slots", "piggy-riches-slots", "raging-rhino-slots", "rainbow-riches-reels-of-gold-slots", "red-riding-hood-slots", "reel-rush-slots", "robin-hood-prince-of-tweets-slots", "shamrock-n-roll-slots", "shangri-la-slots", "silver-lion-slots", "spartacus-slots", "spinata-sw-slots", "steam-tower-slots", "super-diamond-deluxe-slots", "the-green-lantern-slots", "thunderstruck-ii-slots", "thunderstruck-ii-sw-slots", "titan-storm-slots", "twinspin-slots", "volcano-eruption-slots", "when-pigs-fly-slots", "wild-toro-slots", "winstar-slots", "zeus-3-slots", "miss-kitty-slots"]
+	.d-flex
+		section
+			h3 Nektan 00
+			ul.list-unstyled.listNektan.listNektan__rectangle.d-flex.flex-row.flex-wrap.justify-content-center
+				each cover in covers
+					li.m-3.nektan00
+						img.img-fluid(src= "img/nektan/rectangle/" + cover + ".jpg" class= cover)
+						p.text-center= cover
+		section.circle
+			h3 Nektan 01
+			ul.list-unstyled.listNektan.listNektan__circle.d-flex.flex-row.flex-wrap.justify-content-center
+				each cover in covers
+					li.m-3.nektan00
+						img.img-fluid(src= "img/nektan/circle/" + cover + ".png" class= cover)
+						p.text-center= cover
+			
+		
