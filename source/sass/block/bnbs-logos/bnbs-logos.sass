@@ -15,13 +15,13 @@ $logo-list: rewind-bingo 191 100 50, rockin-bingo 177 100 46, cassava-bingo-site
 		background: $bgColor
 
 @each $logo in $logo-list
-	$bgColor: hsl(0, 0, 100)  // white
+	// $bgColor: hsl(0, 0, 100)  // white
 	$bgColor: hsl(nth($logo, 2) + 5, nth($logo, 2), nth($logo, 4) - 10)
 	.logo_bnbs.v01 img.#{nth($logo, 1)}
 		background: $bgColor
 
 @each $logo in $logo-list
-	//$bgColor: hsl(0, 0, 0) // black
+	// $bgColor: hsl(0, 0, 0) // black
 	$bgColor: hsl(nth($logo, 2), nth($logo, 3), 70)
 	.logo_bnbs.v02 img.#{nth($logo, 1)}
 		background: $bgColor
