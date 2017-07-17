@@ -15,22 +15,21 @@ ul.list-unstyled.listNektan
 		overflow: hidden
 	img
 		background: transparent
-$logo-list: rewind-bingo 191 100 50, rockin-bingo 177 100 46, cassava-bingo-sites 115 38 67, slingo-com 267 27 38, city-bingo 26 100 50, chit-chat-bingo 43 100 50, bingo-cams 233 30 29, nugget-bingo 196 94 57, swanky-bingo 36 87 19, gravy-train-bingo 271 100 32, costa-bingo 191 100 50, velvet-slots 356 65 25, butlers-bingo 277 78 29, bingo-liner 211 94 30, coral-bingo 211 100 18, wink-bingo 199  97  65, aunty-acid-bingo 327 100 36, cheeky-bingo 244 31 41, lucky-charm-bingo 207 66 67, smooch-bingo 186 64 51, season-bingo 203 100 69, bingo-appy 193 88 51, bubble-bonus-bingo 195 100 79, diva-bingo 324 100 36, mecca-bingo 289 39 40, vampire-bingo 244 41 44, the-bingo-boutique 0 0 100, swag-bingo 0 0 0, king-jackpot 270 93 23, posh-bingo 0 0 0, bet365-bingo 162 91 27, caesarsbing 0 0 0, two-fat-ladies 195 71 81, bingo-palace 246 77 13, hunky-bingo 0 0 100, paddy-power-bingo 170 100 20, lucky-pants-bingo 262 63 32, betfair-casino 42 100 52, satin-bingo 359 96 24, virgin-bingo 350 100 40, jackpot-joy 231 84 27, frozen-bingo 181 100 49, snowy-bingo 198 97 72, dabber-bingo 0 0 100, bingo-minions 197 72 44, welcome-bingo 208 72 26, newbies-bingo 328 85 27, the-bingo-party 0 0 0, film-bingo 0 0 100, kingdom-of-bingo 49 93 77, the-palaces 0 98 38, amazing-bingo 196 51 56, have-a-ball-bingo 333 95 52, abc-bingo 329 2 17, good-day-bingo 210 66 42, tombola-bing 177 100 34, zingo-bingo 31 79 90, pink-ribbon-bingo 210 100 74, big-brother-bingo 49 84 50, lucky-touch 210 74 32, glitter-bingo 229 38 54, lucy-bingo 8 85 33, plush-bingo 21 100 2, lippy-bingo 337 61 78, unibet-bingo 190 35 48, tasty-bingo 174 61 81, bingo-vip-club 240 78 12, deal-or-no-deal-bingo 0 0 0, scope-bingo 328 73 32, jingle-bingo 26 49 43, hunnie-bingo 343 100 58, bingo-888ladie 0 0 100, lovehearts-bingo 45 95 90, volcano-bingo 198 98 76, dream-bingo 195 76 27, bingo-giving 36 100 47, bingo-zino 236 98 19, my-stars-bingo 195 100 43, zinger-bingo 83 100 63, bingo-millionaire 108 56 59, vegas-mobile-casino 0 0 0, ghost-bingo 284 63 32, slots-of-dosh 45 100 50, oink-bingo 199 83 83, nova-bingo 225 100 76, maria 209 35 44, bucky-bingo 279 48 48, touch-my-bingo 210 81 40, lucky-diner-bingo 122 29 80, sugar-bingo 197 100 50, safari-bingo 281 91 13, sin-street-bingo 353 77 48, bingo-clubhouse 295 69 26, bingo-hollywood 249 76 37, bingo-52 88 50 50, mfortune 282 50 42, bingo-cafe 22 84 4, clucky-bingo 38 67 75, bingo-extra 43 100 83, postcode-bingo 207 63 65, ted-bingo 202 95 64, we-want-bingo 187 100 56, big-tease-bingo 0 0 0, touch-lucky 279 85 20, fever-bingo 182 98 76, brown-cow-bingo 198 72 85, betfred-bingo 274 92 34, charity-bingo-sites 0 0 100, tip-top-bingo 0 0 100, bid-bingo 0 0 94, bingo-001-bingo 0 64 60, biscuit-bingo 18 93 18, beacon-bingo 221 63 19, slot-ranch 35 92 37, coffee-bingo 12 95 18, sky-bingo 264 59 42, bingo-com 199 48 42, spy-bingo 230 100 32, lollipop-bingo 182 100 60, bingo-hombre 38 100 74, bgo 0 0 0, elf-bingo 27 92 54, robin-hood-bingo 202 79 41, deep-sea-bingo 197 97 28, kitty-bingo-2 196 97 41, polo-bingo 342 87 38, bingostars 276 70 13, spin-jackpots 318 92 9, girly-bingo 327 55 63, sweet-shop-bingo 345 82 64, big-bucks-bingo 42 100 53, big-love-bingo 266 52 72, red-bus-bingo 42 64 78, lucky-cow-bingo 211 84 25, honeybees-bingo 45 97 48, wallis-bingo 339 75 55, sweet-home-bingo 189 52 67, iconic-bingo 195 100 79, magical-vegas 252 66 23, vernons-bingo 300 100 11
 
-@each $logo in $logo-list
-	$bgColor: hsl(nth($logo, 2), nth($logo, 3), nth($logo, 4))
-	$bgColor: hsl(nth($logo, 2), 60, nth($logo, 4))
-	ul.list-unstyled .v00 img.#{nth($logo, 1)}
-		background: $bgColor
-
-@each $logo in $logo-list
-	$bgColor: hsl(nth($logo, 2), nth($logo, 3), nth($logo, 4))
-	$bgColor: hsl(nth($logo, 2), nth($logo, 3), 40)
-	ul.list-unstyled .v01 img.#{nth($logo, 1)}
-		background: $bgColor
-
-@each $logo in $logo-list
-	$bgColor: hsl(nth($logo, 2), nth($logo, 3), nth($logo, 4))
-	$bgColor: hsl(nth($logo, 2), 40, 70)
-	ul.list-unstyled .v02 img.#{nth($logo, 1)}
-		background: $bgColor
+// @each $logo in $logo-list
+// 	$bgColor: hsl(nth($logo, 2), nth($logo, 3), nth($logo, 4))
+// 	$bgColor: hsl(nth($logo, 2), 60, nth($logo, 4))
+// 	.v00 img.#{nth($logo, 1)}
+// 		background: $bgColor
+// 
+// @each $logo in $logo-list
+// 	$bgColor: hsl(nth($logo, 2), nth($logo, 3), nth($logo, 4))
+// 	$bgColor: hsl(nth($logo, 2), nth($logo, 3), 40)
+// 	.v01 img.#{nth($logo, 1)}
+// 		background: $bgColor
+// 
+// @each $logo in $logo-list
+// 	$bgColor: hsl(nth($logo, 2), nth($logo, 3), nth($logo, 4))
+// 	$bgColor: hsl(nth($logo, 2), 40, 70)
+// 	.v02 img.#{nth($logo, 1)}
+// 		background: $bgColor
